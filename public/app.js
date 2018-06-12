@@ -3,19 +3,19 @@ var app = function(){
 };
 
 var createCatName = function(catName){
-  var name = document.createElement('li');
+  var name = document.createElement('ul');
   name.textContent = catName;
   return name;
 };
 
 var createCatFavFood = function(foodName){
-  var food = document.createElement('li');
+  var food = document.createElement('ul');
   food.textContent = foodName;
   return food;
 };
 
 var createCatPic = function(picLink){
-  var pic = document.createElement('li');
+  var pic = document.createElement('ul');
   pic.textContent = picLink;
   return picLink;
 };
@@ -27,9 +27,9 @@ var appendElements = function(createCatName, createCatFavFood, createCatPic, con
 }
 
 var addCat = function(catName, foodName, picLink){
-  var createCatPic = createCatPic(picLink);
-  var createCatFavFood = createCatFavFood(foodName);
-  var createCatName = createCatName(catName);
+  var createACatPic = createCatPic(picLink);
+  var createACatFavFood = createCatFavFood(foodName);
+  var createACatName = createCatName(catName);
   var container = document.querySelector('#cats');
 
   appendElements(createCatPic, createCatFavFood, createCatName, container);
